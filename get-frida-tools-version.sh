@@ -2,6 +2,8 @@
 Get frida-tools version shell script v1.0
 
 USAGE:
+    curl -sL https://gitee.com/westinyang/codelabs/raw/master/get-frida-tools-version.sh | bash -s <frida-version> # default: main
+    curl -sL https://raw.githubusercontent.com/westinyang/codelabs/master/get-frida-tools-version.sh | bash -s <frida-version> # default: main
     curl -sL https://gist.githubusercontent.com/westinyang/9815e4b94361a2ad9169650f89f31efc/raw/0b0c805b2b5e0455fc4afe9620669fbe7b7cdbb6/get-frida-tools-version.sh | bash -s <frida-version> # default: main
 BLOCK
 
