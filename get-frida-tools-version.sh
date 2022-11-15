@@ -1,6 +1,8 @@
 :<<BLOCK
 Get frida-tools version shell script v1.0
 
+AUTHOR: westinyang
+
 USAGE:
     curl -sL https://gitee.com/westinyang/codelabs/raw/master/get-frida-tools-version.sh | bash -s <frida-version> # default: main
     curl -sL https://raw.githubusercontent.com/westinyang/codelabs/master/get-frida-tools-version.sh | bash -s <frida-version> # default: main
