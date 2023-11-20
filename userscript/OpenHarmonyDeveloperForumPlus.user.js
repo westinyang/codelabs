@@ -3,13 +3,14 @@
 // @namespace    https://gitee.com/westinyang/codelabs
 // @supportURL   https://gitee.com/westinyang/codelabs
 // @homepageURL  https://gitee.com/westinyang/codelabs
-// @version      1.0.0
+// @version      1.0.1
 // @description  网页排版优化、解锁隐藏功能、Markdown编辑器支持全屏
 // @author       westinyang
 // @match        https://forums.openharmony.cn/
 // @match        https://forums.openharmony.cn/forum.php?mod=post&action=newthread&fid=*
 // @match        https://forums.openharmony.cn/forum.php?mod=viewthread&tid=*
-// @match        https://forums.openharmony.cn/forum.php?mod=post&action=reply&fid=3&tid=*
+// @match        https://forums.openharmony.cn/forum.php?mod=post&action=reply*
+// @match        https://forums.openharmony.cn/forum.php?mod=post&action=edit*
 // @icon         https://forums.openharmony.cn/favicon.ico
 // @grant        none
 // ==/UserScript==
@@ -27,10 +28,11 @@
         // 右侧欢迎和积分显示
         $('.hl_vt_user_box, .hl_vt_user_box_ibtm').show();
     }
-    // 提问题/写文章 | 文章详情回复 | 新窗口回复
+    // 提问题/写文章 | 文章详情回复 | 新窗口回复 | 相关的编辑页面
     else if (url.indexOf('forums.openharmony.cn/forum.php?mod=post&action=newthread&fid=') != -1
              || url.indexOf('forums.openharmony.cn/forum.php?mod=viewthread&tid=') != -1
-             || url.indexOf('forums.openharmony.cn/forum.php?mod=post&action=reply&fid=3&tid=') != -1
+             || url.indexOf('forums.openharmony.cn/forum.php?mod=post&action=reply') != -1
+             || url.indexOf('forums.openharmony.cn/forum.php?mod=post&action=edit') != -1
             ) {
         // 等待Markdown编辑器加载完毕
         general_wait(function(){
