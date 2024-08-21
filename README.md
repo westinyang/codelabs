@@ -6,6 +6,6 @@ westinyang's codelabs
 - [Gtihub](https://github.com/westinyang/codelabs)
 - [Github Gist](https://gist.github.com/westinyang)
 
-## 知识星球
+## 关于作者
 
-- [码力全开](https://docs.qq.com/doc/DQVlkcnlQUEFiQ3Rl)
+- [I'm westinyang](https://kaihongpai.feishu.cn/wiki/CqWLwJRadibxztkrIWZcogWxnXd)

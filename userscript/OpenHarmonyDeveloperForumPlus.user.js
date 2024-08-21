@@ -3,10 +3,10 @@
 // @namespace    https://gitee.com/westinyang/codelabs
 // @supportURL   https://gitee.com/westinyang/codelabs
 // @homepageURL  https://gitee.com/westinyang/codelabs
-// @version      1.0.1
-// @description  网页排版优化、解锁隐藏功能、Markdown编辑器支持全屏
+// @version      1.0.2
+// @description  网页排版优化、解锁隐藏功能、Markdown编辑器支持全屏、隐藏通知角标
 // @author       westinyang
-// @match        https://forums.openharmony.cn/
+// @match        https://forums.openharmony.cn/*
 // @match        https://forums.openharmony.cn/forum.php?mod=post&action=newthread&fid=*
 // @match        https://forums.openharmony.cn/forum.php?mod=viewthread&tid=*
 // @match        https://forums.openharmony.cn/forum.php?mod=post&action=reply*
@@ -20,6 +20,9 @@
 
     var $ = jq;
     var url = location.href;
+
+    // 隐藏通知角标
+    add_css(".notice-icon .dot{ display: none !important; }");
 
     // 首页
     if (url == 'https://forums.openharmony.cn/') {
@@ -84,5 +87,13 @@
                 }
             } catch(e) {}
         }, 500);
+    }
+
+    // 动态加载css样式
+    function add_css(str) {
+        var style = document.createElement("style");
+        // style.type = "text/css";
+        style.innerHTML = str;
+        document.getElementsByTagName("HEAD").item(0).appendChild(style);
     }
 })();
